@@ -1,0 +1,22 @@
+{
+  "name": "nodesjs_bootcamp",
+  "version": "1.0.0",
+  "description": "This is my training folder",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yzah/nodesjs_bootcamp.git"
+  },
+  "keywords": [
+    "TCDP"
+  ],
+  "author": " (ISC)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Yzah/nodesjs_bootcamp/issues"
+  },
+  "homepage": "https://github.com/Yzah/nodesjs_bootcamp#readme"
+}
