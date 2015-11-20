@@ -49,25 +49,25 @@ var fs = require('fs');
 var routes ={
   "/":'templates/index.html',
   "/page1":"templates/pag1.html"
-  "/page2":"Hello page 2"
 }
 var srv = http.createServer(function (req, res) {
-  console.log(req.url);
-  if(routes[req.url]){
+  if (routes[req.url]) {
     // si il trouve une valeur ds mon objet, JS renvoie ???
-    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.writeHead(200, {
+      'Content-Type': 'text/html'
+    });
     // renvoit un en-tête avec code 200=tout va bien, avec le contenu en html
     var routeFile = routes[req.url];
-    fs.readFile(routeFile, function(err,data){
+    fs.readFile(routeFile, function(err, data) {
       if (err) throw err
         res.end(data);
       })
 
   } else{
     res.writeHead(404);
-    res.end('the url :'+req.url +" don't exist");
+    res.end('the url :' +req.url +" don't exist");
   }
-});
-srv.listen(3000, function(err){
-  console.log("Server is now listening on port 3000");
-});
+
+}).listen(3000, function() {
+  console.log("Server now listening at port :" + 3000);
+})
