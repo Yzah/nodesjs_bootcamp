@@ -54,7 +54,7 @@ var routes ={
 var srv = http.createServer(function (req, res) {
   console.log(req.url);
   if(routes[req.url]){
-    // si il trouve une valeur ds mon objet, js
+    // si il trouve une valeur ds mon objet, JS renvoie ???
     res.writeHead(200, {'Content-Type': 'text/html'});
     // renvoit un en-tête avec code 200=tout va bien, avec le contenu en html
     var routeFile = routes[req.url];
