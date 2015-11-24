@@ -1,0 +1,77 @@
+.container {
+    min-width: 400px;
+    max-width: 960px;
+    margin: 0 auto;
+    /*pour centrer un bloc, il doit obligatoirement avoir une largeur + margin à gauche et à droite "auto"*/
+}
+
+header {
+    background-color: #487ECF;
+    min-height: 100px;
+}
+nav {
+    background-color: #46C558;
+}
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+}
+nav li a {
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    border-right: 1px solid black;
+    /*pour que les boutons aient tous la même taille, ajouter les lignes suivantes*/
+    /* width: 100px; */
+    /* text-align: center; */ /*pour centrer le texte sur les boutons*/
+}
+
+nav li a:hover{
+    background-color: #F6EF9D;
+}
+
+aside {
+    background-color: #E29040;
+    min-height: 400px;
+    width: 30%;
+    position: relative; /*sinon le promo sort du bloc*/
+    /* solution n°1 : le display inline-block + vertical align*/
+    /*display: inline-block;*/ /*Attention, quand je mets un inline-block, j'ai un espace de 4px qui s'ajoute entre les blocs et je dois donc ajouter les commentaires dans l'html pour supprimer cet espace*/
+    /*vertical-align: top;*/
+    /*solution n°2 le float: left avec le clear:both dans le footer*/
+    float: left;
+}
+
+/*.promo {
+    height: 100px;
+    width: 100px;
+    background-color: #66E9F5;
+    border-radius: 50%;
+    position: absolute;
+    right: -50px;
+    top: 40px;
+    text-align: center;
+    line-height: 100px; /*center le texte verticalement dans le cercle*/
+/*}*/*/
+
+section {
+    background-color: #E24FCF;
+    min-height: 400px;
+    width: 70%;
+    /* solution n°1 : le display inline-block + vertical align*/
+    /*display: inline-block;
+    vertical-align: top;*/
+    /*solution n°2 le float: left avec le clear:both dans le footer*/
+    float: left;
+}
+footer {
+    background-color: #361B74;
+    min-height: 80px;
+    /*solution n°2 le float: left avec le clear:both dans le footer*/
+    clear: both;
+}

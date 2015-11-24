@@ -33,7 +33,7 @@ function getAllFriends()
     if(index !== -1){
         _.pullAt(friends,index)
       } else {
-        console.log({"error":"no index was found"});
+        console.log({"error":"no index was find"});
       }
       persistData();
       return friends;
@@ -45,9 +45,13 @@ function getAllFriends()
       let currentId = maxId + 1;
       ob.id = currentId;
       friends.push(ob);
-    }else{
-    // MANQUE DES CHOSES
-    let index = _.findIndex
+    } else {
+    let index = _.findIndex(friends,{ 'id': parseInt(ob.id)})
+    if(index !== -1){
+          friends[index] = ob;
+      } else {
+        console.log({"error":"no index was find"});
+      }
     }
     persistData();
     return friends;
@@ -57,7 +61,9 @@ function getAllFriends()
   var that = {};
   that.getFriend = getFriend;
   that.getAllFriends =getAllFriends;
-  that.setFriends =setFriends;
+  that.setFriend =setFriends;
+  that.deleteFriend =deleteFriend;
+  // vérifier si il faut des pluriels ou pas
   return that;
 }
 module.exports = friends;

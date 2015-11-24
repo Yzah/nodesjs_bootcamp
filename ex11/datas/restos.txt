@@ -1,0 +1,15 @@
+db.restaurants.insert(
+  {
+    name:"Chez nono",
+    address:{
+      street:"rue des gens tristes",
+      number:23,
+      city:"Mons",
+      zip:"7000"
+    },
+    phone:"123456123",
+    web:"http://www.truc.be",
+    types:['française'],
+    rating:5
+    }
+);
